@@ -1,5 +1,8 @@
 {
   "routes": [
-    "/"
+    "/autenticacao",
+    "/modulos",
+    "/modulos/home",
+    "/modulos/usuarios"
   ]
 }
