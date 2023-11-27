@@ -3,6 +3,7 @@
     "/autenticacao",
     "/modulos",
     "/modulos/home",
-    "/modulos/usuarios"
+    "/modulos/usuarios",
+    "/modulos/usuarios/novo"
   ]
 }
