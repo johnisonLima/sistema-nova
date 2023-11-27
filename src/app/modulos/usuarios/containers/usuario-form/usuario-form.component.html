@@ -1,1 +1,26 @@
-<p>usuario-form works!</p>
+<mat-card class="example-card">
+
+  <mat-toolbar  color="primary">
+    <span>Cadastrar Usuários</span>
+  </mat-toolbar>
+
+  <mat-card-content>
+
+    <form [formGroup]="form">
+      <div class="form-row">
+        <div *ngFor="let campo of camposComIcones" class="form-field">
+          <mat-form-field class="{{campo.formControlName}}">
+            <input matInput [placeholder]="campo.formControlName" [formControlName]="campo.formControlName" [type]="campo.formControlName.includes('senha') ? 'password' : 'text'">
+          </mat-form-field>
+        </div>
+      </div>
+    </form>
+
+  </mat-card-content>
+
+  <mat-card-actions>
+    <button mat-raised-button   color="primary">Salvar</button>
+    <button mat-raised-button color="warn">Cancelar</button>
+  </mat-card-actions>
+
+</mat-card>

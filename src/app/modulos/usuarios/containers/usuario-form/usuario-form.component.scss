@@ -1,0 +1,41 @@
+.form-row,
+mat-card-actions{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 10px;
+  max-width: 800px;
+  margin: auto;
+  padding-block: 50px;
+}
+
+.nome {
+  width: 300px;
+}
+
+.sobrenome{
+  width: 490px;
+}
+
+.funcao {
+  width: 490px;
+}
+
+.status{
+  width: 300px;
+}
+
+.email {
+  width: 300px;
+}
+
+.telefone{
+  width: 490px;
+}
+
+.senha {
+  width: 395px;
+}
+.repetirSenha{
+  width: 395px;
+}

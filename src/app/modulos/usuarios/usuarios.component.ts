@@ -14,6 +14,7 @@ import { Usuarios } from './madels/usuarios';
 import { UsuariosService } from './services/usuarios.service';
 import { Observable, catchError, of } from 'rxjs';
 import { error } from 'console';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-usuarios',
@@ -37,7 +38,11 @@ export class UsuariosComponent {
   usuarios$: Observable<Usuarios[]>
   displayedColumns = ['nome', 'funcao', 'status', 'email', 'telefone', 'acoes']
 
-  constructor(private usuariosService: UsuariosService) {
+  constructor(
+    private usuariosService: UsuariosService,
+    private router: Router,
+    private route: ActivatedRoute,
+    ) {
     this.usuarios$ = this.usuariosService.listAll()
     .pipe(
       catchError(
@@ -47,6 +52,11 @@ export class UsuariosComponent {
         }
       )
     )
+  }
+
+  onAdd(){
+    console.log("onadd")
+    this.router.navigate(['novo'], { relativeTo: this.route })
   }
 
 }

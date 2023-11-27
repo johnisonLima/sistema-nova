@@ -1,3 +1,4 @@
+import { usuariosRoutes } from './../usuarios/usuarios.routes';
 import { Routes } from '@angular/router';
 
 import { HomeComponent } from '../home/home/home.component';
@@ -15,7 +16,7 @@ export const layoutRoutes: Routes = [
       },
       {
         path: 'usuarios',
-        component: UsuariosComponent
+        loadChildren: () => import('../usuarios/usuarios.routes').then(m => m.usuariosRoutes)
       },
       {
         path: '',
