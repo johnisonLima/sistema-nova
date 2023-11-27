@@ -1,0 +1,153 @@
+@import '../../../../styles.scss';
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap');
+
+/************************* FONTS *****************************
+**************************************************************/
+$secondary-font: 'Noto Sans JP', sans-serif;
+
+/************************* CONTAINER *****************************
+*****************************************************************/
+.gid-container{
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows:  7vh 83vh 10vh;
+  grid-template-areas:
+    'header'
+    'main'
+    'footer'
+  ;
+}
+
+/************************* HEADER *****************************
+**************************************************************/
+header{
+  grid-area: header;
+  background: $background-color;
+  box-shadow: 0px 0px 8px 5px #00000046;
+  z-index: 3;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+header .navbar .navbar-logo{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 220px;
+  margin-inline: 20px;
+  overflow: hidden;
+  transition: width .5s ease;
+}
+
+header .navbar .navbar-logo .icone{
+  width: 32px;
+  height: 32px;
+  min-width: 32px;
+  min-height: 32px;
+  margin: 0 18px 0 15px;
+  display: none;
+}
+
+.container-fluid.nav-closed .sidebar .nav,
+.container-fluid.nav-closed header .navbar-logo {
+  width: 50px;
+}
+
+/************************ MAIN ****************************
+**************************************************************/
+.main{
+  grid-area: main;
+  display: flex;
+  z-index: 1;
+}
+
+/************************ SIDEBAR ****************************
+**************************************************************/
+.sidebar{
+  display: flex;
+}
+
+.sidebar .nav{
+  width: 180px;
+  min-width: 48px;
+  background: $background-color;
+  height: auto;
+  padding-top: 10px;
+  overflow: hidden;
+  transition: width .5s ease;
+  border-right: .5px solid $secondary-color;
+}
+
+.sidebar .nav .nav-item .nav-link.active{
+  color: $background-color;
+  background-color: lighten($background-color, 60%);
+}
+
+.sidebar .nav .nav-item .nav-link.active span{
+  color: #fff;
+}
+
+.sidebar .nav .nav-item .nav-link{
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  font-family: $secondary-font;
+  font-size: 16px;
+  color: $text-color;
+  font-weight: 200;
+  white-space: nowrap;
+  padding-block: 3px;
+  padding-left: 15px;
+  margin-bottom: 5px;
+  cursor: pointer;
+  &:hover{
+    color: $background-color;
+    background-color: lighten($background-color, 60%);
+  }
+  &:hover span{
+    color: #fff;
+  }
+}
+
+.sidebar .nav .nav-item .material-symbols-outlined{
+  width: 25px;
+  height: 25px;
+  color: $text-color;
+  margin-right: 10px;
+}
+
+.sidebar .nav .active{
+  background: lighten($background-color, 50%);
+  color: lighten($background-color, 50%);
+}
+
+/**************************** CONTENT ***************************
+**************************************************************/
+.main-content{
+  flex: 1;
+  background-color: #f1f0f0;
+  padding: 50px;
+}
+
+/************************* FOOTER ***********************
+**************************************************************/
+footer{
+  grid-area: footer;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: darken($background-color, 3%);
+  text-align: center;
+  color: #8a8686;
+  font-size: 12px;
+}
+
+footer .copyrigth{
+  margin: auto;
+
+}
+
+footer p{
+  text-align: center;
+}

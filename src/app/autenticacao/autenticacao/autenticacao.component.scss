@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap');
+
+html,
+body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+}
+
+$cor-branca: #fff;
+$cor-bg: #ffccff;
+$cor-boder: #800080;
+$cor-principal: #191919;
+
+$font-segundaria: 'Noto Sans JP', sans-serif;
+
+@mixin input-login(){
+    border: 0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid $cor-boder;
+    padding: 14px 10px;
+    outline: none;
+    color: $cor-branca;
+    border-radius: 24px;
+    transition: width .5s;
+}
+@mixin input-login-focus(){
+    width: 280px;
+    border-color: $cor-bg;
+}
+
+.main-login{    
+    height: 100vh;
+    background: $cor-bg;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.box-login{
+    width: 350px;
+    padding: 40px;
+    background: $cor-principal;
+    text-align: center;
+    border-radius: 50px;
+    box-shadow: 4px 2px 9px 2px #00000056;
+}
+
+.box-login h1{
+    color: $cor-branca;
+    font-family: $font-segundaria;
+    font-weight: lighter;
+}
+
+.box-login input[type="text"]{
+    @include input-login();
+    width: 200px;
+    &:focus{
+        @include input-login-focus();
+    }
+}
+
+.box-login input[type="password"]{
+    @include input-login();
+    width: 200px;
+    &:focus{
+        @include input-login-focus();
+    }
+}
+
+.box-login input[type="submit"]{
+    @include input-login();
+    padding: 14px 40px;
+    font-family: $font-segundaria;
+    transition: background-color .5s;
+    &:hover{
+        color: $cor-principal;
+        background: $cor-bg;
+    }
+}
+
+// MEDIA QUERIES
+@media screen and (min-width: 768px) {
+    .box-login {
+        width: 450px;
+    }
+}

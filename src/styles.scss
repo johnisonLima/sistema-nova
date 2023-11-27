@@ -1,1 +1,27 @@
 /* You can add global styles to this file, and also import other style files */
+
+html { height: 100%; }
+body { height: 100%;}
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+$primary-color: #0A263C;
+$secondary-color: #16B2BE;
+$text-color: #06DCD0;
+$background-color: #0A263C;
+$button-color: #0A263C;
+
+*,
+::after, 
+::before{
+    box-sizing: border-box;
+}
+
+ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+a{
+    text-decoration: none;
+}

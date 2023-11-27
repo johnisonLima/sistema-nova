@@ -1,0 +1,78 @@
+<div class="gid-container">
+    <header>
+        <nav class="navbar">
+            <div class="navbar-logo navbar-brand">
+                <span class="icone">
+                    <img src="../../../assets/img/icone.png" alt="logo nova esquadria">
+                </span>
+                <span class="logo">
+                    <img src="../../../assets/img/logo-texto.png" alt="logo nova esquadria">
+                </span>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main">
+        <div class="sidebar">
+            <ul class="nav flex-column">
+                <li class="nav-item">
+                    <a class="nav-link" routerLinkActive="active" routerLink="home">
+                        <span class="material-symbols-outlined"> grid_view </span>
+                        Início
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLinkActive="active" routerLink="administracao">
+                        <span class="material-symbols-outlined"> settings </span>
+                        Administração
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLinkActive="active" routerLink="produtos">
+                        <span class="material-symbols-outlined"> inventory_2 </span>
+                        Produtos
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLinkActive="active" routerLink="materiais">
+                        <span class="material-symbols-outlined"> package_2 </span>
+                        Materiais
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLinkActive="active" routerLink="pedidos">
+                        <span class="material-symbols-outlined"> quick_reorder </span>
+                        Pedidos
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLinkActive="active" routerLink="financas">
+                        <span class="material-symbols-outlined"> price_change </span>
+                        Finanças
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLinkActive="active" routerLink="relatorios">
+                        <span class="material-symbols-outlined"> monitoring </span>
+                        Relatórios
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLinkActive="active" routerLink="logout">
+                        <span class="material-symbols-outlined"> logout </span>
+                        Logout
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="main-content">
+            <router-outlet></router-outlet>
+        </div>
+    </main>
+
+    <footer>
+        <div class="copyrigth">
+            <p>Copyrigth ©<script>document.write(new Date().getFullYear())</script>. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+</div>

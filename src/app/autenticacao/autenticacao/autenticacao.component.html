@@ -1,0 +1,14 @@
+<section class="main-login">
+    <div class="box-login">
+        <h1>LOGIN</h1>
+
+        <input type="text" class="form-control" id="userName" placeholder="Usuário ou e-mail"
+            [(ngModel)]="usuario.nome">
+
+
+        <input type="password" class="form-control" id="inputSenha" placeholder="Senha" 
+            [(ngModel)]="usuario.senha">
+
+        <input type="submit" (click)="fazerLogin()" value="Acessar">
+    </div>
+</section>
