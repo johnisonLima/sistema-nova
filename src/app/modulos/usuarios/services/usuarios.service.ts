@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
-import { Usuarios } from '../madels/usuarios';
+import { Usuario } from '../model/usuario';
 import { delay, first, tap } from 'rxjs';
 
 @Injectable({
@@ -16,7 +16,7 @@ export class UsuariosService {
   ) { }
 
   listAll(){
-    return this.http.get<Usuarios[]>(this.API)
+    return this.http.get<Usuario[]>(this.API)
     .pipe(
       first(),
       // delay(1500),
@@ -27,4 +27,7 @@ export class UsuariosService {
     )
   }
 
+  loadById(id: string) {
+    return this.http.get<Usuario>(`${this.API}/id`)
+  }
 }

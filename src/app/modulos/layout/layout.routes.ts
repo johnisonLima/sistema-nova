@@ -14,7 +14,7 @@ export const layoutRoutes: Routes = [
       },
       {
         path: 'usuarios',
-        loadChildren: () => import('../usuarios/containers/usuarios/usuarios.routes').then(m => m.usuariosRoutes)
+        loadChildren: () => import('../usuarios/usuarios.routes').then(m => m.usuariosRoutes)
       },
       {
         path: '',

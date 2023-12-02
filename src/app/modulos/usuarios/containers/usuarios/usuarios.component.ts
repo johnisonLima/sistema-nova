@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { ActivatedRoute, Router } from '@angular/router';
+import { Observable, catchError, of } from 'rxjs';
 
 import {MatTableModule} from '@angular/material/table';
 import {MatInputModule} from '@angular/material/input';
@@ -10,11 +12,8 @@ import {MatDialogModule} from '@angular/material/dialog';
 import {MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
 
-import { Usuarios } from '../../madels/usuarios';
+import { Usuario } from '../../model/usuario';
 import { UsuariosService } from '../../services/usuarios.service';
-import { Observable, catchError, of } from 'rxjs';
-import { error } from 'console';
-import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-usuarios',
@@ -35,7 +34,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class UsuariosComponent {
 
-  usuarios$: Observable<Usuarios[]>
+  usuarios$: Observable<Usuario[]>
   displayedColumns = ['nome', 'funcao', 'status', 'email', 'telefone', 'acoes']
 
   constructor(
@@ -55,8 +54,11 @@ export class UsuariosComponent {
   }
 
   onAdd(){
-    console.log("onadd")
     this.router.navigate(['novo'], { relativeTo: this.route })
+  }
+
+  onEdit(usuario: Usuario){
+    this.router.navigate(['edit', usuario._id], { relativeTo: this.route })
   }
 
 }

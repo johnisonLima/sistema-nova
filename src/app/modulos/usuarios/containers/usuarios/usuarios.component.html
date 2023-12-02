@@ -46,17 +46,22 @@
       <!-- açoes Column -->
       <ng-container matColumnDef="acoes">
 
+        <!-- add Column -->
         <mat-header-cell *matHeaderCellDef>
-          <button mat-mini-fab color="primary" aria-label="Adicionar um usuário" >
-            <mat-icon (click)="onAdd()">add</mat-icon>
+          <button mat-mini-fab color="primary" aria-label="Adicionar um usuário"
+          (click)="onAdd()">
+            <mat-icon >add</mat-icon>
           </button>
         </mat-header-cell>
 
-        <mat-cell *matCellDef="let usuario">
-          <button mat-icon-button color="primary" aria-label="Editar um usuário">
+        <mat-cell *matCellDef="let user">
+          <!-- edit Column -->
+          <button mat-icon-button color="primary" aria-label="Editar um usuário"
+          (click)="onEdit(user)">
             <mat-icon>edit</mat-icon>
           </button>
 
+          <!-- delete Column -->
           <button mat-icon-button color="warn" aria-label="Remover um usuário">
             <mat-icon>delete</mat-icon>
           </button>
