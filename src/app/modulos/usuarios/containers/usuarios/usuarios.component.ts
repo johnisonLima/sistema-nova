@@ -10,8 +10,8 @@ import {MatDialogModule} from '@angular/material/dialog';
 import {MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
 
-import { Usuarios } from './madels/usuarios';
-import { UsuariosService } from './services/usuarios.service';
+import { Usuarios } from '../../madels/usuarios';
+import { UsuariosService } from '../../services/usuarios.service';
 import { Observable, catchError, of } from 'rxjs';
 import { error } from 'console';
 import { ActivatedRoute, Router } from '@angular/router';
