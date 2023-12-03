@@ -14,28 +14,30 @@ import {MatIconModule} from '@angular/material/icon';
 
 import { Usuario } from '../../model/usuario';
 import { UsuariosService } from '../../services/usuarios.service';
+import { UsuariosListComponent } from "../../components/usuarios-list/usuarios-list.component";
 
 @Component({
-  selector: 'app-usuarios',
-  standalone: true,
-  imports: [
-    CommonModule,
-    MatTableModule,
-    MatInputModule,
-    MatCardModule,
-    MatToolbarModule,
-    MatProgressSpinnerModule,
-    MatDialogModule,
-    MatButtonModule,
-    MatIconModule
-  ],
-  templateUrl: './usuarios.component.html',
-  styleUrl: './usuarios.component.scss'
+    selector: 'app-usuarios',
+    standalone: true,
+    templateUrl: './usuarios.component.html',
+    styleUrl: './usuarios.component.scss',
+    imports: [
+      // MatTableModule,
+      // MatInputModule,
+      // MatDialogModule,
+      // MatButtonModule,
+      // MatIconModule,
+        CommonModule,
+        MatCardModule,
+        MatToolbarModule,
+        MatProgressSpinnerModule,
+        UsuariosListComponent
+    ]
 })
 export class UsuariosComponent {
 
   usuarios$: Observable<Usuario[]>
-  displayedColumns = ['nome', 'funcao', 'status', 'email', 'telefone', 'acoes']
+  // displayedColumns = ['nome', 'funcao', 'status', 'email', 'telefone', 'acoes']
 
   constructor(
     private usuariosService: UsuariosService,

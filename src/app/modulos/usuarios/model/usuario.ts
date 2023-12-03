@@ -1,9 +1,11 @@
 export interface Usuario{
-  _id: String;
-  nome: String;
-  sobrenome: String;
-  funcao: String;
-  status: String;
-  email: String;
-  telefone: String;
+  _id: string;
+  nome: string;
+  sobrenome: string;
+  funcao: string;
+  status: string;
+  email: string;
+  telefone: string;
+  senha: string;
+  repetirSenha: string;
 }

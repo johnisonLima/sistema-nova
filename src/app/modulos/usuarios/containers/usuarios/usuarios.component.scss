@@ -24,10 +24,12 @@ mat-header-cell{
   align-content: center;
   flex-direction: column;
 }
+
 mat-header-cell,
 mat-cell{
   padding-block: 10px;
 }
+
 .loading-spinner{
   display: flex;
   align-items: center;

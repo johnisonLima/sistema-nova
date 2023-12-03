@@ -27,6 +27,10 @@ export class UsuariosService {
     )
   }
 
+  save(record: Partial<Usuario>){
+    return this.http.post<Usuario>(this.API, record)
+  }
+
   loadById(id: string) {
     return this.http.get<Usuario>(`${this.API}/id`)
   }
