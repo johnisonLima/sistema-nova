@@ -81,16 +81,16 @@ export class UsuarioFormComponent {
   ngOnInit(): void {
     const usuario: Usuario = this.route.snapshot.data['usuario']
 
-    // this.form.setValue({
-    //   nome: usuario.nome,
-    //   sobrenome: usuario.sobrenome,
-    //   funcao: usuario.funcao,
-    //   status: usuario.status,
-    //   email: usuario.email,
-    //   telefone: usuario.telefone,
-    //   senha: usuario.senha,
-    //   repetirSenha: usuario.repetirSenha
-    // })
+    this.form.patchValue({
+      nome: usuario.nome,
+      sobrenome: usuario.sobrenome,
+      funcao: usuario.funcao,
+      status: usuario.status,
+      email: usuario.email,
+      telefone: usuario.telefone,
+      senha: usuario.senha,
+      repetirSenha: usuario.repetirSenha
+    })
   }
 
   onSubmit(){
