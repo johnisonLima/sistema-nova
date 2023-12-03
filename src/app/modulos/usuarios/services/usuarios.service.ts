@@ -32,6 +32,7 @@ export class UsuariosService {
   }
 
   loadById(id: string) {
-    return this.http.get<Usuario>(`${this.API}/id`)
+    // console.log(this.http.get<Usuario>(`${this.API}/id`))
+    return this.http.get<Usuario>(`${this.API}/${[id]}`)
   }
 }

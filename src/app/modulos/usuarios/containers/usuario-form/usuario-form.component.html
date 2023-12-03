@@ -1,7 +1,7 @@
 <mat-card class="example-card">
 
   <mat-toolbar color="primary">
-    <span>Cadastrar Usuários</span>
+    <span>Editar Usuário</span>
   </mat-toolbar>
 
   <mat-card-content>
@@ -9,35 +9,35 @@
     <form [formGroup]="form">
       <div class="form-row">
 
-        <mat-form-field>
+        <mat-form-field class="nome">
           <input matInput placeholder="Nome" formControlName="nome">
         </mat-form-field>
 
-        <mat-form-field>
+        <mat-form-field class="sobrenome">
           <input matInput placeholder="Sobrenome" formControlName="sobrenome">
         </mat-form-field>
 
-        <mat-form-field>
+        <mat-form-field class="funcao">
           <input matInput placeholder="Função" formControlName="funcao">
         </mat-form-field>
 
-        <mat-form-field>
+        <mat-form-field class="status">
           <input matInput placeholder="Status" formControlName="status">
         </mat-form-field>
 
-        <mat-form-field>
+        <mat-form-field class="email">
           <input matInput placeholder="E-mail" formControlName="email">
         </mat-form-field>
 
-        <mat-form-field>
+        <mat-form-field class="telefone">
           <input matInput placeholder="Telefone" formControlName="telefone">
         </mat-form-field>
 
-        <mat-form-field>
+        <mat-form-field class="senha">
           <input matInput placeholder="Senha" formControlName="senha">
         </mat-form-field>
 
-        <mat-form-field>
+        <mat-form-field class="repetirSenha">
           <input matInput placeholder="Repetir senha" formControlName="repetirSenha">
         </mat-form-field>
 
@@ -47,7 +47,7 @@
   </mat-card-content>
 
   <mat-card-actions>
-    <button mat-raised-button color="primary" (click)="onSubmit()">Salvar</button>
+    <button mat-raised-button color="primary" (click)="onSubmit()">Editar</button>
     <button mat-raised-button color="warn" (click)="onCancel()">Cancelar</button>
   </mat-card-actions>
 

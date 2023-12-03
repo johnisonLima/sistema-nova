@@ -10,3 +10,4 @@
   {"_id": "9", "nome": "Lucas", "sobrenome": "Martins", "funcao": "Assistente", "status": "ativo", "email": "Lucas@email.com", "telefone": "7798123-4567"},
   {"_id": "10", "nome": "Aline", "sobrenome": "Silva", "funcao": "Operacional", "status": "ativo", "email": "Aline@email.com", "telefone": "7798345-6789"}
 ]
+

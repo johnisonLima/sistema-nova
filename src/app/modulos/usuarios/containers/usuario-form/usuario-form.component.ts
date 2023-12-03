@@ -37,6 +37,7 @@ import { UsuariosService } from '../../services/usuarios.service';
 export class UsuarioFormComponent {
 
   form =  this.formBuilder.group({
+    _id: [''],
     nome: [''],
     sobrenome: [''],
     funcao: [''],
@@ -56,17 +57,6 @@ export class UsuarioFormComponent {
     )
   {}
 
-  // form = this.formBuilder.group({
-  //   nome: [''],
-  //   sobrenome: [''],
-  //   funcao: [''],
-  //   status: [''],
-  //   email: [''],
-  //   telefone: [''],
-  //   senha: [''],
-  //   repetirSenha: ['']
-  // })
-
   // camposComIcones = [
   //   { formControlName: 'nome'},
   //   { formControlName: 'sobrenome' },
@@ -82,6 +72,7 @@ export class UsuarioFormComponent {
     const usuario: Usuario = this.route.snapshot.data['usuario']
 
     this.form.patchValue({
+      _id: usuario._id,
       nome: usuario.nome,
       sobrenome: usuario.sobrenome,
       funcao: usuario.funcao,
