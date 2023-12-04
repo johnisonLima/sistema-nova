@@ -12,6 +12,7 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
 
 import { Usuario } from '../../model/usuario';
+
 @Component({
   selector: 'app-usuarios-list',
   standalone: true,
@@ -45,6 +46,10 @@ export class UsuariosListComponent {
 
     onEdit(usuario: Usuario){
       this.router.navigate(['edit', usuario._id], { relativeTo: this.route })
+    }
+
+    onDelete(usuario: Usuario){
+
     }
 
 }

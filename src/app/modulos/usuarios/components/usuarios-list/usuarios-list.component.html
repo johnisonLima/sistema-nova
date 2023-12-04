@@ -55,7 +55,8 @@
       </button>
 
       <!-- delete Column -->
-      <button mat-icon-button color="warn" aria-label="Remover um usuário">
+      <button mat-icon-button color="warn" aria-label="Remover um usuário"
+      (click)="onDelete(user)">
         <mat-icon>delete</mat-icon>
       </button>
     </td>
